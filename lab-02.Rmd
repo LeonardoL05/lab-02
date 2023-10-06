@@ -101,6 +101,10 @@ plastic_data_all$total_mismanage_plastic <- plastic_data_all$mismanaged_plastic 
 
 plastic_data_all %>% head(n = 10)
 
+mean_totals <- plastic_data_all %>% group_by(region) %>% summarise(mean_total = mean(total_mismanage_plastic))
+
+mean_totals
+
 ```
 
 
